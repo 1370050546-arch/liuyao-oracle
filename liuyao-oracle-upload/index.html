@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>六爻占卜</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="oracle-panel">
+        <div class="brand">
+          <span class="seal">爻</span>
+          <div>
+            <h1>六爻问事</h1>
+            <p>以事入卦，以象观变</p>
+          </div>
+        </div>
+
+        <form class="ask-box" id="divination-form">
+          <label for="question">所问之事</label>
+          <textarea id="question" name="question" rows="4" placeholder="例如：我接下来三个月换工作是否顺利？"></textarea>
+          <div class="actions">
+            <button class="primary" type="submit">摇卦</button>
+            <button class="ghost" id="clear-btn" type="button">清空</button>
+          </div>
+        </form>
+
+        <div class="coin-stage" aria-label="三枚铜钱">
+          <span class="coin">乾</span>
+          <span class="coin">坤</span>
+          <span class="coin">通</span>
+        </div>
+      </section>
+
+      <section class="result-panel">
+        <div class="empty-state" id="empty-state">
+          <div class="bagua" aria-hidden="true">
+            <span>乾</span><span>兑</span><span>离</span><span>震</span>
+            <span>巽</span><span>坎</span><span>艮</span><span>坤</span>
+          </div>
+          <h2>静心一问，六爻自成</h2>
+          <p>问有所在，象有其时。</p>
+        </div>
+
+        <div class="reading hidden" id="reading">
+          <header class="reading-head">
+            <div>
+              <p class="eyebrow">本卦</p>
+              <h2 id="primary-name">-</h2>
+            </div>
+            <div>
+              <p class="eyebrow">变卦</p>
+              <h2 id="changed-name">-</h2>
+            </div>
+          </header>
+
+          <div class="hexagram-grid">
+            <article class="hex-card">
+              <h3>卦象</h3>
+              <div class="hexagram" id="primary-hexagram"></div>
+            </article>
+            <article class="hex-card">
+              <h3>变象</h3>
+              <div class="hexagram" id="changed-hexagram"></div>
+            </article>
+          </div>
+
+          <div class="details">
+            <div>
+              <span class="label">动爻</span>
+              <strong id="moving-lines">-</strong>
+            </div>
+            <div>
+              <span class="label">五行侧重</span>
+              <strong id="element-focus">-</strong>
+            </div>
+            <div>
+              <span class="label">问题类型</span>
+              <strong id="question-type">-</strong>
+            </div>
+          </div>
+
+          <article class="answer">
+            <h3>解卦</h3>
+            <div id="answer-text"></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

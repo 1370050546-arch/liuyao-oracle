@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "api/interpret.js": {
-      "maxDuration": 30
-    }
-  }
-}
